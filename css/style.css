@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+:root{
+    --green:#5ff906;
+    --light-green:#92f577;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.header{
+    position:fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    z-index: 999;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 9%;
+}
+
+.btn{
+    display: inline-block ;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: var(--light-green);
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding:0.8rem 3rem ;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    position: relative;
+    z-index: 0;
+}
+
+.btn:hover{
+    background: var(--green);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color:gold;
+    font-weight: bold;
+}
+
+.header .logo span{
+    color: green;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color:var(--green);
+}
+
+#menu-btn{
+    left: 0;
+    font-size: 2.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+.header.active{
+    box-shadow: var(--box-shadow);
+    padding: 2rem 9%;
+}
+
+.login-form-container{
+    position: fixed;
+    top: -105%; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,255,255,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.login-form-container.active{
+    top:0;
+    opacity: 1;
+}
+
+.login-form-container form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
+}
+
+.login-form-container form .btn{
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.login-form-container form h3{
+    color: var(--black);
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.login-form-container form .box{
+    margin: 0.7rem 0;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    border: var(--border);
+}
+
+.login-form-container form p{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.login-form-container form p a{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-form{
+    position: absolute;
+    top: 1.5rem;right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.home{
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h1{
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    color: var(--black)
+}
+
+.home img{
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: #eee;
+}
+
+.icons-container .icons{
+    background:#fff;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding:2rem;
+    gap:1.5rem;
+}
+
+.icons-container .icons i{
+    height:5rem;
+    width:5rem;
+    line-height:5rem;
+    font-size:2.5rem;
+    color:var(--black);
+    background:#eee;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.icons-container .icons .content h3{
+    font-size: 2.5rem;
+    color:var(--green);
+}
+
+.icons-container .icons .content p{
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.icons-container .icons:hover{
+    background:var(--black);
+}
+
+.icons-container .icons:hover i{
+    background:var(--green);
+}
+
+.icons-container .icons:hover .content h3{
+    color:#fff;
+}
+
+.bikes .bikes-slider{
+    padding-bottom: 10rem; 
+}
+.bikes .bikes-slider .box{
+    padding: 5rem;
+    text-align: center;
+}
+
+.bikes .bikes-slider .box img{
+    width: 100%;
+}
+
+.bikes .bikes-slider .box .content{
+    transform: scale(0);
+    padding-top: 1rem;
+}
+
+.bikes .bikes-slider .swiper-slide-active .content{
+    transform: scale(1);
+}
+
+.bikes .bikes-slider .box .content h3{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.bikes .bikes-slider .box .content .price{
+    font-size: 2.5rem;
+    color: var(--green);
+    padding: 1rem 0;
+    font-weight: bold;
+}
+
+.bikes .bikes-slider .box .content .price span{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.featured .featured-slider{
+    padding:1rem;
+    padding-bottom: 4rem;
+}
+
+.featured .featured-slider .box{
+    padding:2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border:var(--border);
+    border-radius: .5rem;
+}
+
+.featured .featured-slider .box img{
+    height: 15rem;
+}
+
+.featured .featured-slider .box .content h3{
+    font-size: 2.2rem;
+    color:var(--black);
+}
+
+.featured .featured-slider .box .content .stars{
+    padding:1rem 0;
+}
+
+.featured .featured-slider .box .content .stars i{
+    font-size: 1.7rem;
+    color:gold;
+}
+
+.featured .featured-slider .box .content .price{
+    font-size: 2.5rem;
+    color:var(--black);
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:990px) {
+    html{
+        font-size: 55%;
+    }
+
+    .header.active{
+        box-shadow: var(--box-shadow);
+        padding: 2rem ;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+@media(max-width:700px) {
+    .header{
+        padding: 3rem 2%;
+    }
+
+    .home imag{
+        width: 50%;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 90% ; left: 0;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 1.5rem;
+    }
+
+    #menu-btn{
+        display: block;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+    .bikes .bikes-slider .box{
+        padding: 5rem;
+        width: 50%;
+        
+    }
+}
